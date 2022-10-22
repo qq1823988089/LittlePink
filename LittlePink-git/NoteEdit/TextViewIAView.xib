@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TextViewIAView" customModule="LittlePink_git" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-Gy-4YQ">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="1"/>
+                    <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="EmE-GE-RlZ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTy-HO-auO">
+                    <rect key="frame" x="315.33333333333331" y="1" width="58.666666666666686" height="44"/>
+                    <subviews>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-Ct-Ctk">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgK-eF-EGc">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ad9-Xz-ETK">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YO-bP-9Cv">
+                            <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="44"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="完成"/>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="VTy-HO-auO" secondAttribute="bottom" id="4RQ-Yl-lzG"/>
+                <constraint firstItem="rd2-Gy-4YQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5fj-4i-HHf"/>
+                <constraint firstAttribute="trailing" secondItem="VTy-HO-auO" secondAttribute="trailing" constant="16" id="WCI-K7-A91"/>
+                <constraint firstItem="VTy-HO-auO" firstAttribute="top" secondItem="rd2-Gy-4YQ" secondAttribute="bottom" id="Xct-k4-BB1"/>
+                <constraint firstItem="rd2-Gy-4YQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s5B-Bi-7u6"/>
+                <constraint firstAttribute="trailing" secondItem="rd2-Gy-4YQ" secondAttribute="trailing" id="sux-Iq-9Ew"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="currentTextCount" destination="AgK-eF-EGc" id="1J8-n9-TGf"/>
+                <outlet property="doneBtn" destination="3YO-bP-9Cv" id="iNm-V5-Hve"/>
+                <outlet property="maxTextCount" destination="Ad9-Xz-ETK" id="SPU-sH-Yv8"/>
+                <outlet property="textCountStackView" destination="ukm-Ct-Ctk" id="6rU-ii-mc2"/>
+            </connections>
+            <point key="canvasLocation" x="92" y="-381"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
